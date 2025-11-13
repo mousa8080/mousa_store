@@ -1,0 +1,91 @@
+composer create-project laravel/laravel store
+
+________________create controllers
+php artisan make:controller DashpoardController
+
+________________create key securety in .env
+php artisan key:generate
+
+________________create config callected all .env and instead of .env
+php artisan config:cache
+
+_________cleare config cache
+php artisan config:clear
+
+________________MAKE COMPONENET
+php artisan make:component SinglePostComponent
+
+________________create migration
+php artisan make:migration create_categories_table
+//////php artisan make:migration add_user_id_to_posts_table --table=posts /////add update in posts
+
+
+_______________ make migrate
+php artisan migrate
+
+_______________ remove last migrate
+php artisan migrate::rollback
+
+_______________ reset all migration 
+php artisan migrate:reset
+
+_______________ refresh rollback an migrate 
+php artisan migrate:refresh 
+
+_______________ drop database no rollback delete any whay relation is set
+php artisan migrate:fresh
+
+_______________ get all info migration
+php artisan migrate:status
+
+______________ create model
+ artisan make:model name_model
+
+______________ create model and migration as the same time
+ artisan make:model name_model -m
+
+
+______________ create face data in tabls using is in testing  _-seeder
+php artisan make:seeder UserSeeder
+__________ go seeder
+php artisan db:seed      
+______________ Authentication with The Breeze Starter Kit
+composer require laravel/breeze --dev  // this install this bage;
+
+----------- remove breeze
+coposer remove larave/breeze --de
+
+______________ make resorse controoler in file Dashpoart have 7 methods post get delete update puth put and more -r resonse it
+
+php artisan make:controller Dashpoard\CategoriesController -r
+
+______________ show the list all routs in my app
+php aritsan route:list
+
+______________ عشان يخلي ملف public يشاور علي public sorage 
+php artisan storage:link
+
+______________ create modle and controller and migration
+php artisan make:modle name_Modle -mc
+_____________factory this data fake 
+php artisan make:factory PostFactory --model=Post
+
+____________ make middelweare
+php artisan make:middleware IsAdminMiddleware
+
+____________ fresh seeder and migration
+php artisan migrate:fresh --seed
+
+____________ make Request validation 
+ php artisan make:request CategoryRequest
+
+____________create custom rule 
+ php artisan make:rule Filter
+
+____________create component --veiw
+php artisan make:component alert --view
+
+____________create pagination custom
+
+php artisan vendor:publish --tag=laravel-pagination
+
